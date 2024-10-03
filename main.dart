@@ -3,9 +3,13 @@
 class Item {
 String name= "";
 double price = 0;
+double discount;
 
+Item(this.name, this.price, [this.discount = 0.0]);
 
-  Item(this.name, this.price);
+double getDiscountedPrice() {
+  return price * (1 - discount / 100);
+}
 String displayItem(String name, double price) 
 {
    return "the $name is for $price dolar";
@@ -86,12 +90,15 @@ print("the item ${itemStock.item.name} is droped");
     }
   }
 
+
     void displayRemainingStock() {
     print("remaining stock");
     for (var itemStock in items) {
       print("${itemStock.item.name}: ${itemStock.stock} remaining");
     }
   }
+  
+  
 }
 
 void main() {
