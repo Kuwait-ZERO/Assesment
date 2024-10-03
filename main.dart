@@ -3,7 +3,7 @@
 class Item {
 String name= "";
 double price = 0;
-double discount;
+double discount; // discount initalization ( i did not have time to complite it )
 
 Item(this.name, this.price, [this.discount = 0.0]);
 
@@ -79,7 +79,7 @@ print("the item ${itemStock.item.name} is droped");
  }
  }
     }
-    print("$itemName is out");
+    print("$itemName is out for you");
   }
 
   void getChange() {
